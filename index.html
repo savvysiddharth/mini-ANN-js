@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>nn-v2-test</title>
+  <script src="matrix.js"></script>
+  <script src="nn.js"></script>
+  <script>
+    let size = 200; //size of image
+    let hidden_layers_count = Math.floor(size*(2/3) + 2); //some rule of thumb
+    let mynn = new NeuralNetwork([size*size , 64, 2]);
+
+    let myinput = [];
+
+    for(let i = 0 ; i < size*size ; i++) {
+      myinput.push(Math.random());
+    }
+
+    console.log('output',mynn.feedforward(myinput));
+
+    // console.table(mynn.weights[0].data);
+
+    mynn.mutate(0.2);
+
+    // console.table(mynn.weights[0].data);
+  </script>
+  <style>
+    body {
+      background-color: black;
+    }
+  </style>
+</head>
+<body>
+</body>
+</html>
