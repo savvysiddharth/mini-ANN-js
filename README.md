@@ -9,7 +9,7 @@ This library is inspired by [Toy-Neural-Network](https://github.com/CodingTrain/
 * **Initialize** Neural Network
 
 ```javascript
-//ANN with 4 inputs, 3 neurons in hidden layer and 2 outputs
+// ANN with 4 inputs, 3 neurons in hidden layer and 2 outputs
 const my_ann = new NeuralNetwork([4, 3, 2]);
 // initializes ANN with random weights and biases
 ```
@@ -49,9 +49,12 @@ my_ann.train(input, expected_output);
 * Functions for **Genetic algorithms**
 
 ```javascript
-//mutate weights and biases of ANN
+// mutate weights and biases of ANN
 my_ann.mutate(0.2); //mutation rate = 0.2 (min-0 & max-1)
 
 // creates a copy of ann
 new_ann = my_ann.copy()
+
+// crossover
+const offspring = my_ann.crossover(other_ann);
 ```
