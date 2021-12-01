@@ -58,3 +58,22 @@ new_ann = my_ann.copy()
 // crossover
 const offspring = my_ann.crossover(other_ann);
 ```
+
+* **Visualization** function
+
+```javascript
+const canvas = document.getElementById("canvas")
+const ctx = canvas.getContext("2d")
+const nn = new NeuralNetwork([3,5,3,2])
+nn.draw(
+  ctx, // canvas context
+  100, // top left x coordinate to start drawing from
+  100, // top left y coordinate to start drawing from
+  [-0.5, 0.75, 0.2], // OPTIONAL network inputs. When given also visualizes activation states
+  20 // OPTIONAL neuron radius. Default = 20
+)
+```
+
+Example output:
+
+![example output of draw function](https://user-images.githubusercontent.com/543577/144102996-ce1a7e90-ed12-4134-af05-70d46db34ce0.png)
